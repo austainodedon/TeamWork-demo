@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha backend/tests/**/*.js --require @babel/register --reporter spec --timeout 25000",
+    "build": "babel ./backend --out-dir ./dist --copy-files --ignore ./node_modules,./coverage,./.babelrc,.nyc_output,./package.json,./npm-debug.log,./.travis.yml,./.eslintrc,./UI,./README.md",
     "start": "node --exec babel-node backend/server.js",
     "start:dev": "nodemon --exec babel-node backend/server.js"
   },
