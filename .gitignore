@@ -1,5 +1,4 @@
 node_modules
-.env
 .gitmessage
 coverage
 .nyc_output
