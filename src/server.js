@@ -22,12 +22,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "welcome to teamwork" });
+  res.status(200).json({ message: "This is the teamwork Backend API, enjoy" });
 });
 app.use("/api/v1/docs", swaggerUi.serve, swaggerUi.setup(apiDocs));
 app.use("/api/v1", logger, apiRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
