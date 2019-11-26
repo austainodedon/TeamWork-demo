@@ -9,7 +9,8 @@
     "build-babel": "babel -d ./build ./src -s",
     "build": "npm run clean && npm run build-babel",
     "coverage": "nyc report --reporter=text-lcov --reporter=lcov",
-    "start": "node ./build/server.js",
+    "coveralls": "npm run int:test&& nyc report --reporter=text-lcov | coveralls",
+    "start": "node -r @babel/register ./src/server.js",
     "start:dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./src/server.js",
     "lint": "node_modules/.bin/eslint --fix src/**/*.js"
   },
