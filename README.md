@@ -32,7 +32,7 @@ Employee login schema:
 ```json
 {
   "email": "austine@gmail.com",
-  "password": "1234"
+  "password": "asdf1234"
 }
 ```
 
