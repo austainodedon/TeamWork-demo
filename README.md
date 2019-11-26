@@ -1,5 +1,7 @@
 # Teamwork-demo
 
+[![Build Status](https://travis-ci.org/austainodedon/teamwork-demo.svg?branch=develop)](https://travis-ci.org/austainodedon/teamwork-demo)[![Coverage Status](https://coveralls.io/repos/github/austainodedon/Teamwork-demo/badge.svg?branch=develop)](https://coveralls.io/github/austainodedon/Teamwork-demo?branch=develop)
+
 Teamwork is an internal social network for employees of an organization. The goal of this application is to facilitate interaction between colleagues and promote internal bonding. This is the backend for the application with the various API endpoints
 
 #### users endpoints
