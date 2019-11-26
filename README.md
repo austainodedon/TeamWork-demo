@@ -1,4 +1,4 @@
-# Teamwork-backend
+# Teamwork-demo
 
 Teamwork is an internal social network for employees of an organization. The goal of this application is to facilitate interaction between colleagues and promote internal bonding. This is the backend for the application with the various API endpoints
 
@@ -16,7 +16,7 @@ User signup schema:
   "firstName": "austine",
   "lastName": "emeka",
   "email": "austine@gmail.com",
-  "password": "1234",
+  "password": "asdf1234",
   "gender": "male",
   "jobRole": "software Ninja",
   "department": "Backend Developer",
@@ -48,7 +48,7 @@ Gif post schema:
 ```json
 {
   "title": "The fancy GIF",
-  "image": "C:/Users/user/Desktop/austaino/pic1.png"
+  "imageUrl": "C:/Users/user/Desktop/austaino/pic1.png"
 }
 ```
 
@@ -117,4 +117,4 @@ To get the Node server running locally:
 
 - Clone this repo
 - `npm install` to install all required dependencies
-- `npm run dev` to start the local server
+- `npm run start:dev` to start the local server
