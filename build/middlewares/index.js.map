@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/middlewares/index.js"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;AAAA;;AACA","sourcesContent":["import validate from './validate';\nimport Authenticate from './authenticate';\n\nexport { validate, Authenticate };\n"],"file":"index.js"}

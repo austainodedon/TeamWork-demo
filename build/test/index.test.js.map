@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/test/index.test.js"],"names":[],"mappings":";;AAAA;;AACA;;AACA;;AACA","sourcesContent":["import './controllers/1-baseRoute.test';\nimport './controllers/userController.test';\nimport './controllers/gifController.test';\nimport './controllers/articleController.test';\n"],"file":"index.test.js"}
