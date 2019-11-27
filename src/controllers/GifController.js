@@ -47,6 +47,25 @@ export default class GifController {
   }
 
   /**
+   * @method getArticles
+   * @description - method to get all articles
+   * @param {object} req - request object
+   * @param {object} res - response object
+   * @return {object} request response body
+   */
+  static async getGifs(req, res) {
+    try {
+      const { error, result: gifs } = await getItems("gifs");
+      if (!error) {
+        return successResponsArray(res, 200, gifs);
+      }
+      return errorResponse(res, 500, "Server error geting items");
+    } catch (error) {
+      return errorResponse(res, 500, "Server error");
+    }
+  }
+
+  /**
    * @method getgif
    * @description - method to get all articles
    * @param {object} req - request object

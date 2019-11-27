@@ -1,11 +1,9 @@
-import express from 'express';
-import { validate, Authenticate } from '../../middlewares';
-import { GifController } from '../../controllers';
+import express from "express";
+import { validate, Authenticate } from "../../middlewares";
+import { GifController } from "../../controllers";
 
 const { verifyToken } = Authenticate;
-const {
-  createGif, deleteGif, commentGif, getGif
-} = GifController;
+const { createGif, deleteGif, commentGif, getGif, getGifs } = GifController;
 
 const router = express.Router();
 
@@ -14,30 +12,34 @@ const router = express.Router();
   @Access: private authenticated users can create gif
   @Route: POST <domain>/api/v1/gifs
 */
-router.post('/', validate('createGif'), verifyToken, createGif);
+router.post("/", validate("createGif"), verifyToken, createGif);
 
+/*
+  @Description: endpoint users get all gifs
+  @Access: private authenticated users get all gifs
+  @Route: GET <domain>/api/v1/gifs
+*/
+router.get("/", verifyToken, getGifs);
 
 /*
   @Description: endpoint users get specific gif
   @Access: private authenticated users get specific gif
   @Route: GET <domain>/api/v1/gifs/>id>
 */
-router.get('/:id', verifyToken, getGif);
-
+router.get("/:id", verifyToken, getGif);
 
 /*
   @Description: endpoint users to delete gif
   @Access: private only authenticated users can deleted their  gif
   @Route: DELETE <domain>/api/v1/gifs/<:id>
 */
-router.delete('/:id', verifyToken, deleteGif);
-
+router.delete("/:id", verifyToken, deleteGif);
 
 /*
   @Description: endpoint for user to comment on a gif
   @Access: private only authenticated users can comment
   @Route: POST <domain>/api/v1/gifs/<:id>/comment
 */
-router.post('/:id/comment', validate('comment'), verifyToken, commentGif);
+router.post("/:id/comment", validate("comment"), verifyToken, commentGif);
 
 export default router;

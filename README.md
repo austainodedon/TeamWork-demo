@@ -62,25 +62,6 @@ Gif comment schema:
 }
 ```
 
-#### categories endpoints
-
-| Action | Endpoint                                  | Functionality                       |
-| ------ | ----------------------------------------- | ----------------------------------- |
-| GET    | `/api/v1/categories/`                     | Admin get categories                |
-| GET    | `/api/v1/categories/:id`                  | Admin get single category           |
-| POST   | `/api/v1/categories/`                     | Admin create category               |
-| PATCH  | `/api/v1/categories/:id`                  | Admin Edit category                 |
-| DELETE | `/api/v1/categories/:id`                  | Admin delete category               |
-| GET    | `/api/v1/categories/:categoryId/articles` | Employee Get articles in a category |
-
-Category schema:
-
-```json
-{
-  "categoryName": "Break into category"
-}
-```
-
 #### articles endpoints
 
 | Action | Endpoint                             | Functionality                    |
